@@ -1,24 +1,48 @@
 const nodes = [
     {
         id: 1,
-        name: "node 1",
-        price: 1,
-        transactions: 50
+        block: 3591296,
+        hash: "0x80dcddee5b38e92f0faab57c4ba9eaeacaecf2f29ddb0359a64aea9419faa4a5",
+        gas: 21000,
+        validator: "0x77ef632e023632a4e9130ab81882e163485849a",
+        signers: [],
+        transactions: {
+            type: "Token Transfer",
+            status: "Success",
+            fee:    "150.09 CELO",
+            time:   ""
+        },
     },
-
     {
         id: 2,
-        name: "node 2",
-        price: 1,
-        transactions: 10
+        block: 3591296,
+        hash: "0x80dcddee5b38e92f0faab57c4ba9eaeacaecf2f29ddb0359a64aea9419faa4a5",
+        gas: 21000,
+        validator: "0x77ef632e023632a4e9130ab81882e163485849a",
+        signers: [],
+        transactions: {
+            type: "Token Transfer",
+            status: "Success",
+            fee:    "150.09 CELO",
+            time:   ""
+        },
     },
 
     {
         id: 3,
-        name: "node 3",
-        price: 1,
-        transactions: 18
+        block: 3591296,
+        hash: "0x80dcddee5b38e92f0faab57c4ba9eaeacaecf2f29ddb0359a64aea9419faa4a5",
+        gas: 21000,
+        validator: "0x77ef632e023632a4e9130ab81882e163485849a",
+        signers: [],
+        transactions: {
+            type: "Token Transfer",
+            status: "Success",
+            fee:    "150.09 CELO",
+            time:   ""
+        },
     },
+
 ]
 
 export default nodes

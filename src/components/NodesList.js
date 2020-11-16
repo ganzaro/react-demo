@@ -4,11 +4,15 @@ const NodesList = ({nodes}) => {
     return nodes.map(nod => {
         return (
             <div key={nod.id}>
-              <span>
-                <a href={nod.id}><h4>{nod.name}</h4></a>
-              </span>
-              <span>by <strong>{nod.name}</strong></span>
-              <span>| Transactions: {nod.transactions}</span>
+              <span><h4>Block: {nod.block}</h4></span>
+              <p>Hash: {nod.hash}</p>
+              
+              <span>Gas Price <strong>{nod.gas}</strong></span>
+              <p>Validator: {nod.validator}</p>
+              <h4>Transactions</h4>
+              <p>Type: {nod.transactions.type}</p>
+              <p>fee: {nod.transactions.fee}</p>
+              <p>time: {nod.transactions.time}</p>
               <br/><br/>
             </div>
           );
