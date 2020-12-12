@@ -2,15 +2,19 @@
 import React from 'react';
 
 // import logo from './logo.svg';
-import NodesList from './components/NodesList'
-import Totals from './components/Totals'
+import NodesList from './NodesList'
+import Totals from './Totals'
 import nodes from './data/nodes';
 import './App.css';
+import { Header, Header2 } from '../../components/Header'
+
 
 function App() {
   return(
     <div>
-      <h1>Celo Nodes Info</h1>
+      <Header2  ></Header2>
+      
+      <h1>Nodes Info</h1>
       <Totals></Totals>
       <hr></hr>
       <NodesList nodes={nodes} />

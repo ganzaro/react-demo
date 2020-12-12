@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import 'bootstrap/dist/css/bootstrap.css';
+
+import AppCel from './demos/cel/App';
+import AppRM from './demos/rickm/App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppRM />
+    {/* <AppCel /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

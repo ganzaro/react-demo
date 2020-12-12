@@ -1,0 +1,52 @@
+
+(my modif)
+
+https://www.pluralsight.com/guides/how-to-use-react-bootstrap-with-npm
+
+character endpoint of the Rick and Morty API, a free REST/GraphQL based API that provides information about characters, episodes, and locations of the Rick and Morty TV show
+https://rickandmortyapi.com/
+
+request data from the /character endpoint. 
+One way to do this is to use fetch() inside useEffect() hook and store the respose data inside the state variable. 
+By providing an empty array as a second argument to useEffect(), you can ensure that the request is made only after the initial render. 
+
+
+// 1
+    <Card key={character.id} style={{ width: "18rem" }}> 
+    <Card.Img variant="top" src={character.image} />
+    </Card>
+
+// 2
+    <Card className="m-4" key={character.id} style={{ width: "18rem" }}>
+        <Card.Img variant="top" src={character.image} />
+        <Card.Body>
+            <Card.Title>{character.name}</Card.Title>
+            <Card.Text>{character.species}</Card.Text>
+            <Button variant="primary" href={character.url} target="_blank">
+                More Info
+            </Button>
+        </Card.Body>
+    </Card>
+
+
+// 3 All the cards in a single line don't look right. 
+To change the layout of the <Card> component, render everything inside <CardColumns> instead of <div>, 
+which will divide the cards into columns.
+
+  return (
+    <CardColumns>
+      {data.map((character) => (
+        <Card className="m-4" key={character.id} style={{ width: "20rem" }}>
+          <Card.Img variant="top" src={character.image} />
+
+          <Card.Body>
+            <Card.Title>{character.name}</Card.Title>
+            <Card.Text>{character.species}</Card.Text>
+            <Button variant="primary" href={character.url} target="_blank">
+              More Info
+            </Button>
+          </Card.Body>
+        </Card>
+      ))}
+    </CardColumns>
+  );
